@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>图表统计</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="js/layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/jquery.min.1.7.js"></script>
+    <script>
+		! function(e) {
+			function t(a) {
+				if(i[a]) return i[a].exports;
+				var n = i[a] = {
+					exports: {},
+					id: a,
+					loaded: !1
+				};
+				return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+			}
+
+			var i = {};
+			return t.m = e, t.c = i, t.p = "", t(0)
+		}([function(e, t) {
+			"use strict";
+			Object.defineProperty(t, "__esModule", {
+				value: !0
+			});
+			var i = window;
+			t["default"] = i.flex = function(e, t) {
+				var a = e || 100,
+					n = t || 1,
+					r = i.document,
+					o = navigator.userAgent,
+					d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+					l = o.match(/U3\/((\d+|\.){5,})/i),
+					c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+					p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+					s = i.devicePixelRatio || 1;
+				p || d && d[1] > 534 || c || (s = 1);
+				var u = 1 / s,
+					m = r.querySelector('meta[name="viewport"]');
+				m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+			}, e.exports = t["default"]
+		}]);
+		flex(100, 1);
+	</script>
+</head>
+<body>
+	<div class="k-header">
+		<div class="fixed_nav">
+			<a class="nav_left" href="javascript:void(0);">
+				<span class="icon_menu"></span>
+			</a>
+			<a class="nav_middle" href="index.html">
+				<span>我的食堂</span>
+			</a>
+		</div>
+		<div class="fixed_subnav">
+			<ul class="kit_nav">
+				<li class="sub_active">点评统计</li>
+				<li>投票统计</li>
+			</ul>
+		</div>
+	</div>
+	<div class="k-content">
+		<div class="charts_title">
+			<a class="charts_middle" href="javascript:void(0)">历史统计</a>
+			<a class="charts_right" href="index_charts.html">今日统计</a>
+		</div>
+		<div class="charts_content">
+			<div class="charts_item">
+				<div class="char_left">
+					<img src="images/cai03.png"/>
+				</div>
+				<div class="char_right">
+					<p>
+						<span class="char_name fl">梅菜扣肉</span>
+						<span class="char_result fr">60</span>
+					</p>
+					<p>
+						<span class="char_range orange glow">
+							<span style="width: 60%"></span>
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="charts_item">
+				<div class="char_left">
+					<img src="images/cai01.png"/>
+				</div>
+				<div class="char_right">
+					<p>
+						<span class="char_name fl">家常豆腐</span>
+						<span class="char_result fr">40</span>
+					</p>
+					<p>
+						<span class="char_range orange glow">
+							<span style="width: 40%"></span>
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="k-footer">
+		<div class="fixed_menu">
+			<a href="index.html">菜单浏览</a>
+			<a href="index_yesterday.html">昨日菜单</a>
+			<a href="index_suggestions.html">我要投诉</a>
+			<a class="menu_active" href="index_charts.html">图表统计</a>
+		</div>
+	</div>
+	<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    $(function(){
+	    	$('.char_range').each(function(index,item){
+				var thisWidth = $(this).find('span').width();
+				$(this).find('span').animate({left:0},1000);
+	    	});
+			$('body').on('click','.exit_btn',function(){
+				exitLayer();
+			});
+			$('body').on('click','.sug_sub .sub_btn',function(){
+				if($('.sug_sub .sub_btn').hasClass('sub_btn_on')){
+					successLayer();
+				}else{
+					noneWord();
+				}
+			});
+	
+	    });
+	</script>
+</body>
+</html>

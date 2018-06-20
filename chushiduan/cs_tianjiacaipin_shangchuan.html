@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>添加菜品</title>
+		<link rel="stylesheet" type="text/css" href="../css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="../js/layer_mobile/need/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/chushiduan.css"/>
+		<script>
+			! function(e) {
+				function t(a) {
+					if(i[a]) return i[a].exports;
+					var n = i[a] = {
+						exports: {},
+						id: a,
+						loaded: !1
+					};
+					return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+				}
+
+				var i = {};
+				return t.m = e, t.c = i, t.p = "", t(0)
+			}([function(e, t) {
+				"use strict";
+				Object.defineProperty(t, "__esModule", {
+					value: !0
+				});
+				var i = window;
+				t["default"] = i.flex = function(e, t) {
+					var a = e || 100,
+						n = t || 1,
+						r = i.document,
+						o = navigator.userAgent,
+						d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+						l = o.match(/U3\/((\d+|\.){5,})/i),
+						c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+						p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+						s = i.devicePixelRatio || 1;
+					p || d && d[1] > 534 || c || (s = 1);
+					var u = 1 / s,
+						m = r.querySelector('meta[name="viewport"]');
+					m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+				}, e.exports = t["default"]
+			}]);
+			flex(100, 1);
+		</script>
+		<script src="../js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/script.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="k-header">
+			<div class="fixed_nav">
+				<a class="nav_left" href="javascript:history.go(-1);">
+					<span class="go_back"></span>
+				</a>
+				<a class="nav_middle" href="">
+					<span>添加菜品</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="cs_tjcp_srcm">
+			<input type="text" name="" id="" value="" placeholder="在此输入菜名" />
+		</div>
+		
+		<div class="cs_tjcp_sc">
+			<div class="album-old">
+				<div class="upload-btn btn-old"><input type="file" name="" id=""></div>
+				<div id="previewer" class="upload-img"></div>	
+				<span class="album-old-span">点击添加图片</span>
+			</div>
+		</div>
+		<div class="cs_tjcp_jj">
+			<h2>简 介</h2>
+			<textarea name="" rows="" cols="" class="cs_tjcp_jj_text" placeholder="说说这道菜的特色吧！！"></textarea>
+		</div>
+		<div class="cs_tjcp_tjdcd">
+			添加到菜单
+		</div>
+		
+		<script src="../js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+			})
+		</script>
+	</body>
+</html>

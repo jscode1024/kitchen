@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>投诉建议</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="js/layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/jquery.min.1.7.js"></script>
+    <script>
+		! function(e) {
+			function t(a) {
+				if(i[a]) return i[a].exports;
+				var n = i[a] = {
+					exports: {},
+					id: a,
+					loaded: !1
+				};
+				return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+			}
+
+			var i = {};
+			return t.m = e, t.c = i, t.p = "", t(0)
+		}([function(e, t) {
+			"use strict";
+			Object.defineProperty(t, "__esModule", {
+				value: !0
+			});
+			var i = window;
+			t["default"] = i.flex = function(e, t) {
+				var a = e || 100,
+					n = t || 1,
+					r = i.document,
+					o = navigator.userAgent,
+					d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+					l = o.match(/U3\/((\d+|\.){5,})/i),
+					c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+					p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+					s = i.devicePixelRatio || 1;
+				p || d && d[1] > 534 || c || (s = 1);
+				var u = 1 / s,
+					m = r.querySelector('meta[name="viewport"]');
+				m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+			}, e.exports = t["default"]
+		}]);
+		flex(100, 1);
+	</script>
+</head>
+<body>
+	<div class="k-header">
+		<div class="fixed_nav">
+			<a class="nav_left" href="javascript:void(0);">
+				<span class="icon_menu"></span>
+			</a>
+			<a class="nav_middle" href="index.html">
+				<span>我的食堂</span>
+			</a>
+		</div>
+		<div class="fixed_subnav">
+			<ul class="kit_nav">
+				<li>投诉菜品</li>
+				<li class="sub_active">投诉厨师</li>
+				<li>投诉餐厅</li>
+			</ul>
+		</div>
+	</div>
+	<div class="k-content">
+		<form action="" method="post">
+			<div class="sug_txt">
+				<textarea name="" rows="" cols="" maxlength="60" id="intTxt"></textarea>
+				<div class="count_txt"><span class="cont_tips">0</span>/60</div>
+			</div>
+			<div class="sug_file">
+				<a href="javascript:void(0);">
+				    <input type="file" name="" id="intFile" accept="image/gif, image/jpeg, image/png" onchange="previewFile()"><label for="intFile">上传照片<img src="" alt="" /></label>
+				</a>
+			</div>
+			<!--<div class="sug_file">
+			    <ul class="upload-ul clearfix">
+			        <li class="upload-pick">
+			            <div class="webuploader-container clearfix" id="goodsUpload"></div>
+			        </li>
+			    </ul>
+			</div>-->
+			<div class="sug_check">
+				<a href="javascript:void(0);">
+				    <input type="checkbox" name="" id="intCheck" value=""/><label for="intCheck">匿名投诉</label>
+				</a>
+			</div>
+			<div class="clearfix"></div>
+			<div class="sug_sub">
+				<a href="javascript:void(0);">
+					<span class="sub_btn">提交投诉</span>
+				</a>
+			</div>
+		</form>
+	</div>
+	<div class="k-footer">
+		<div class="fixed_menu">
+			<a href="index.html">菜单浏览</a>
+			<a href="index_yesterday.html">昨日菜单</a>
+			<a class="menu_active" href="index_suggestions.html">我要投诉</a>
+			<a href="index_charts.html">图表统计</a>
+		</div>
+	</div>
+	<div class="user_layer">
+		<ul class="ul_layer">
+			<li>修改密码</li>
+			<li>退出登录</li>
+		</ul>
+	</div>
+	<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/webuploader.min.js"></script>-->
+	<!--<script src="js/diyUpload.js"></script>-->
+	<script>
+	    $(function(){
+	        //上传图片
+//	        var $tgaUpload = $('#goodsUpload').diyUpload({
+//	            url:'/uploadFilePath',
+//	            success:function( data ) { },
+//	            error:function( err ) { },
+//	            buttonText : '',
+//	            accept: {
+//	                title: "Images",
+//	                extensions: 'gif,jpg,jpeg,bmp,png'
+//	            },
+//	            thumb:{
+//	                width:120,
+//	                height:90,
+//	                quality:100,
+//	                allowMagnify:true,
+//	                crop:true,
+//	                type:"image/jpeg"
+//	            }
+//	        });
+	        $('body').on('click','.icon_menu',function(){
+				userMenuLayer();
+			});
+			$('body').on('click','ul.ul_layer>li',function(){
+				layer.closeAll();
+			});
+			$('body').on('click','.exit_btn',function(){
+				exitLayer();
+			});
+			$('body').on('click','.sug_sub .sub_btn',function(){
+				if($('.sug_sub .sub_btn').hasClass('sub_btn_on')){
+					successLayer();
+				}else{
+					noneWord();
+				}
+			});
+	
+	    });
+	</script>
+</body>
+</html>

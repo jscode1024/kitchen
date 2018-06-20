@@ -1,0 +1,231 @@
+.cs_tjcp_top{
+	font-size: .64rem;
+	color: #000000;
+	text-align: center;
+	margin-top: 1.8rem;
+}
+.cs_tjcp_list{
+	width: 64%;
+	margin: .2rem auto;
+}
+.cs_tjcp_list span{
+	display: block;
+	width: 100%;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	text-align: center;
+	color: #000000;
+	font-size: .36rem;
+}
+.cs_tjcp_list_middle{
+	border-top: 2px solid #089a2e;
+	border-bottom: 2px solid #089a2e;
+}
+.cs_tjcp_list .cs_tjcp_list_cur{
+	color: #089a2e;
+	font-size: .46rem;
+}
+.cs_tjcp_xyb{
+	width: 70%;
+	height: .9rem;
+	background-color: #ffa000;
+	border-radius: 500px;
+	margin: 1.5rem auto;
+	color: #fffefe;
+	font-size: .36rem;
+	text-align: center;
+	line-height: .9rem;
+}
+.go_back{
+	display: block;
+	width: .4rem;
+	height: .39rem;
+	background: url(../images/go_back.png) no-repeat;
+	background-size: cover;
+	margin-top: .3rem;
+}
+.cs_tjcp_srcm{
+	height: 1.2rem;
+	width: 92.8%;
+	border-bottom: 4px solid #e4e4e4;
+	margin: 1.2rem auto 0;
+}
+.cs_tjcp_srcm input{
+	font-size: .36rem;
+    color: #000000;
+    border: none;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2rem;
+}
+.album-old {
+    width: 5.5rem;
+    height: 3.2rem;
+    background: url(../images/album-old.png) no-repeat;
+    background-size: cover;
+    margin: .5rem auto;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+.upload-btn input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.upload-btn {
+    position: absolute;
+    width: 100%;
+    height: 3.2rem;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+}
+.album-old .upload-img {
+    width: 100%;
+    height: 3.2rem;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+}
+.album-old-span{
+	position: absolute;
+	top: 2.3rem;
+	display: inline-block;
+	color: #000000;
+	font-size: .32rem;
+	left: 1.8rem;
+}
+.upload-img img {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.cs_tjcp_jj{
+	padding: .2rem;
+}
+.cs_tjcp_jj h2{
+	font-size: .36rem;
+	color: #000000;
+	height: .6rem;
+}
+.cs_tjcp_jj span{
+	font-size: .3rem;
+	color: #797979;
+}
+.cs_tjcp_jj_text{
+	width: 100%;
+	height: 1.5rem;
+	font-size: .3rem;
+	border: none;
+	border-bottom: 4px solid #e4e4e4;
+}
+.cs_tjcp_tjdcd {
+    width: 70%;
+    height: .9rem;
+    background-color: #ffa000;
+    border-radius: 500px;
+    margin: .3rem auto .2rem;
+    color: #fffefe;
+    font-size: .36rem;
+    text-align: center;
+    line-height: .9rem;
+}
+.sccd_titile{
+	color: #000000;
+	font-size: .44rem;
+	text-align: center;
+	line-height: .6rem;
+	height: .6rem;
+	margin-top: 1.2rem;	
+}
+
+.sccd_content{
+	padding: .2rem;
+}
+.sccd_content_top img{
+	width: 1.6rem;
+	height: 1rem;
+}
+.sccd_content_top span{
+	font-size: .36rem;
+	color: #000000;
+	margin-left: .18rem;
+	vertical-align: middle;
+}
+.sccd_content_zpcs{
+	color: #999999;
+	font-size: .3rem;
+}
+.sccd_content_qxzcs{
+	color: #000000;
+	font-size: .36rem;
+	margin-left: .18rem;
+}
+.sccd_content_select{
+	padding-top: .3rem;
+	padding-bottom: .3rem;
+	border-bottom: 4px solid #e4e4e4;
+	position: relative;
+}
+.sccd_content_qxzcs_icon{
+	display: inline-block;
+	width: .3rem;
+	height: .18rem;
+	background: url(../images/icon_sjx.png) no-repeat;
+	background-size: cover;
+	margin-left: .2rem;
+}
+.sccd_content_select_list{
+	/*width: 2.38rem;*/
+	max-height: 4rem;
+	overflow-y: scroll;
+	/*display: none;*/
+	/*position: absolute;*/
+	top: .8rem;
+    left: 1.6rem;
+    border: 1px solid #E4E4E4;
+    background-color: #FFFFFF;
+    z-index: 999;
+}
+.sccd_content_select_list span{
+	display: block;
+	height: .8rem;
+	border-bottom: 1px solid #E4E4E4;
+	line-height: .8rem;
+	text-align: center;
+	font-size: .3rem;
+	color: #000000;
+}
+.sccd_content_select_list .sccd_content_select_cur{
+	color: #089a2e;
+}
+.xgmm_content{
+	margin-top: 1.2rem;
+}
+.xgmm_content_list{
+	width: 92%;
+	border-bottom: 4px solid #E4E4E4;
+	margin: .2rem auto;
+	height: .6rem;
+}
+.xgmm_justfy{
+	color: #000000;
+	font-size: .3rem;
+	width: 2.2rem;
+	text-align: justify;
+	display: inline-block;
+	overflow:hidden;
+	vertical-align:top;
+}
+.xgmm_justfy>i{display:inline-block;width:100%;height:0;}
+.xgmm_content_list input{
+    font-size: .3rem;
+    color: #000000;
+    border: none;
+    height: .49rem;
+    outline: none;
+}
+
